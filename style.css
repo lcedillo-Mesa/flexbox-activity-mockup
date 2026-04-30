@@ -1,22 +1,95 @@
 /* ================================================================
    Lens & Light — Photography Blog
-   style.css — Guided Version
+   style.css
 
-   Find every  ???  and replace it with the correct value.
-   /* Use your cheat sheet and the mock-up to help you. */
-/* ================================================================ */ 
+   Use the mock-up and your cheat sheet to complete the rules below.
+   Properties marked with ??? need to be filled in.
+   Some rules are missing properties entirely — you will need to add them.
+   Save with Ctrl + S after every change.
+================================================================ */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* ----------------------------------------------------------------
+   BODY
+   Nothing to change here.
+---------------------------------------------------------------- */
+
+.body {
+  font-family: Arial, sans-serif;
+  background-color: #f1efe8;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+/* ----------------------------------------------------------------
+   HEADER
+   Goal: title and tagline stack top to bottom, text on the LEFT.
+---------------------------------------------------------------- */
+
+.header {
+  background-color: #1a1a2e;
+  color: white;
+  display: flex;
+  padding: 20px 24px;
+  flex-direction: ???;
+  gap: 4px;
+  justify-content: ???;
+}
+
+.header-title {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.header-tagline {
+  color: #9FE1CB;
+  font-size: 13px;
+}
+
+
+/* ----------------------------------------------------------------
+   NAV
+   Goal: links sit SIDE BY SIDE with space around each one.
+---------------------------------------------------------------- */
+
+.nav {
+  background-color: #0F6E56;
+  display: flex;
+  flex-direction: ???;
+  justify-content: ???;
+  padding: 10px 24px;
+  gap: 20px;
 }
 
 .nav-link {
-    text-decoration: none;
-    font-size: 14px;
-    color: white;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
 }
+
+
+/* ----------------------------------------------------------------
+   HERO
+   Goal: title and text sit SIDE BY SIDE.
+---------------------------------------------------------------- */
+
+.hero {
+  background-color: #2c2c3e;
+  padding: 20px 24px;
+  display: flex;
+  gap: 10px;
+  color: white;
+  flex-direction: ???;
+}
+
 .hero-title {
   font-size: 18px;
   font-weight: 500;
@@ -28,130 +101,16 @@
   max-width: 400px;
   line-height: 1.6;
 }
-.detail-label {
-    color: #1a1a2e;
-    font-size: 11px;
-    font-weight: 500;
-}
-.detail-value {
-  color: #5F5E5A;
-  font-size: 11px;
-}
-
-
-.sidebar-tag {
-  background-color: #EEEDFE;
-  color: #534AB7;
-  border-radius: 4px;
-  padding: 5px 10px;
-  font-size: 12px;
-  text-align: center;
-}
-
-
-/* ----------------------------------------------------------------
-   BODY
-   Makes the whole page stack top to bottom.
-   Nothing to change here.
----------------------------------------------------------------- */
-
-.body {
-  font-family: Arial, sans-serif;
-  background-color: #f1efe8;
-  display: flex;
-  flex-direction: column;  
-  /* change flex-direction to have a value of column-reverse for a fun surprise*/
-  min-height: 100vh;
-}
-
-
-/* ----------------------------------------------------------------
-   HEADER
-   Goal: title and tagline should stack on top of each other
-   and sit on the LEFT side of the header.
-
-   BLANK 1 — align-items
-   Look at the mock-up. The text is on the LEFT.
-   Which value lines items up on the left?
-   Hint: it starts with "flex"
----------------------------------------------------------------- */
-
-.header {
-  background-color: #1a1a2e;
-  color: white;
-  display: flex;
-
-  /* padding: 20px 24px; */
-  /* flex-direction: column; */
-  /* write your answer here */
-  /* gap: 4px; */
-  /* align-items: ______;  */
-}
-
-
-
-
-/* ----------------------------------------------------------------
-   NAV
-   Goal: links should sit SIDE BY SIDE and start from the LEFT.
-
-   Nothing to fill in here — read the values and look at
-   the mock-up to see what each one is doing.
----------------------------------------------------------------- */
-
-.nav {
-  background-color: #0F6E56;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  
-  /* padding: 10px 24px; */
-  /* gap: 20px; */
-  
-}
-
-
-
-/* ----------------------------------------------------------------
-   HERO
-   Goal: title and text should stack and sit in the CENTRE.
-
-   Nothing to fill in here — read the values and look at
-   the mock-up to see what each one is doing.
----------------------------------------------------------------- */
-
-.hero {
-  background-color: #2c2c3e;
-  padding: 20px 24px;
-  display: flex;
-  gap: 8px;
-  color: white;
-  flex-direction: row;
-  text-align: center;
-
-  /* right now the studnet is using text align center but its not working is there anther proerty that we can use to align items to the center? */
-}
-
 
 
 /* ----------------------------------------------------------------
    MAIN
-   Goal: sidebar and images should sit SIDE BY SIDE.
+   Goal: sidebar and images sit SIDE BY SIDE.
 
-   BLANK 2 — display
-   The two sections need to sit next to each other.
-   What is the one property that turns flexbox on?
-   Hint: you have typed this many times today.
+   This rule is missing two properties — add them yourself.
 ---------------------------------------------------------------- */
 
 .main {
-    /* right now the flex properties are not working can you think why that is and waht we have to add to out code to make it work? think back to what we need in order to make that happend it sosmehting that we need to add to make a it a flex container*/
-
-
-  flex: 1;  /* is you remoce this line of code absorce what happend the container, notce how it takes up all od the reamining sapce that si becaseu the dlex properiety when given an number makes it so that it takes up any remaing sapce*, see what happend when we change it to 0*/
-
-
-  flex-direction: row;
   gap: 16px;
   padding: 20px;
   background-color: #f1efe8;
@@ -160,10 +119,7 @@
 
 /* ----------------------------------------------------------------
    SIDEBAR
-   Goal: all the photo info should stack TOP TO BOTTOM.
-
-   Nothing to fill in here — read the values and look at
-   the mock-up to see what each one is doing.
+   Goal: photo info stacks TOP TO BOTTOM.
 ---------------------------------------------------------------- */
 
 .sidebar {
@@ -171,10 +127,10 @@
   border-radius: 6px;
   padding: 16px;
   width: 180px;
-  /* flex-shrink: 0; */
+  flex-shrink: 0;
   border: 0.5px solid #D3D1C7;
   display: flex;
-  flex-direction: row; /* if we want to change the direction of our elemnest to be stacked on top of eachother than ewe need to chang it to flex-direction-column so that it can match the layout we were given*/
+  flex-direction: ???;
   gap: 10px;
 }
 
@@ -192,54 +148,69 @@
   gap: 2px;
 }
 
+.detail-label {
+  color: #1a1a2e;
+  font-size: 11px;
+  font-weight: 500;
+}
 
+.detail-value {
+  color: #5F5E5A;
+  font-size: 11px;
+}
+
+.sidebar-tag {
+  background-color: #EEEDFE;
+  color: #534AB7;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 12px;
+  text-align: center;
+}
 
 
 /* ----------------------------------------------------------------
    IMAGES
-   Goal: two photos should stack on TOP OF EACH OTHER.
-   This section should fill the remaining space next to the sidebar.
+   Goal: photos stack TOP TO BOTTOM and fill the remaining space.
 
-   Nothing to fill in here — read the values and look at
-   the mock-up to see what each one is doing.
+   This rule is missing one property — add it yourself.
 ---------------------------------------------------------------- */
 
 .images {
   display: flex;
-  flex: 1;
-  flex-direction: column;
+  flex-direction: ???;
   gap: 12px;
 }
+
+
+/* ----------------------------------------------------------------
+   PHOTO
+   Goal: each photo fills the available space equally.
+---------------------------------------------------------------- */
 
 .photo {
   background-color: #D3D1C7;
   border-radius: 6px;
   padding: 40px 20px;
-  flex: 1;
+  font-size: 13px;
+  color: #5F5E5A;
+  text-align: center;
+  flex: ???;
 }
 
 
 /* ----------------------------------------------------------------
    FOOTER
-   Goal: links should sit side by side and be CENTRED.
-
-   BLANK 3 — justify-content
-   Look at the mock-up. The footer content is in the centre.
-   Which value centres items left to right?
-   Hint: it is one word.
+   Goal: links sit side by side on the LEFT side of the footer.
 ---------------------------------------------------------------- */
 
 .footer {
   background-color: #1a1a2e;
   padding: 12px 24px;
   display: flex;
-  justify-content:baseline; /* right now this value does now allow the */
-  align-items: center;
+  justify-content: ???;
   gap: 20px;
 }
-
-
-
 
 .footer-text {
   color: #9FE1CB;
@@ -250,3 +221,196 @@
   color: #AFA9EC;
   font-size: 12px;
 }
+
+
+/* ----------------------------------------------------------------
+   BONUS — responsive font sizes
+
+   Update all font sizes from px to rem.
+   Example: 16px ≈ 1rem
+---------------------------------------------------------------- */
+
+
+/* ================================================================
+   CHALLENGES
+   You have finished the main layout — great work.
+
+   The challenges below ask you to ADD new sections to the page.
+   For each one:
+   1. Add the HTML to index.html in the right place
+   2. Write the CSS rule here to style it
+   3. Use the mock-up description and hints to guide you
+
+   There is no single correct answer — experiment and see what works.
+================================================================ */
+
+
+/* ----------------------------------------------------------------
+   CHALLENGE 1 — Gallery Section
+
+   Add a row of photo cards that wraps onto the next line
+   when there is not enough space.
+
+   --- HTML to add in index.html (paste after the closing .main div) ---
+
+   <div class="gallery">
+     <div class="gallery-heading">Gallery</div>
+     <div class="gallery-grid">
+       <div class="gallery-card">Photo 1</div>
+       <div class="gallery-card">Photo 2</div>
+       <div class="gallery-card">Photo 3</div>
+       <div class="gallery-card">Photo 4</div>
+       <div class="gallery-card">Photo 5</div>
+       <div class="gallery-card">Photo 6</div>
+     </div>
+   </div>
+
+   --- CSS to complete below ---
+
+   Goal: .gallery-grid should display the cards in a row
+   that wraps when it runs out of space.
+   Each card should be a fixed width so they line up in a grid.
+
+   Properties you will need:
+   display | flex-wrap | gap | justify-content
+---------------------------------------------------------------- */
+
+.gallery {
+  background-color: #ffffff;
+  padding: 24px;
+}
+
+.gallery-heading {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #1a1a2e;
+  margin-bottom: 16px;
+}
+
+.gallery-grid {
+  display: ???;
+  flex-wrap: ???;
+  gap: ???;
+  justify-content: ???;
+}
+
+.gallery-card {
+  background-color: #D3D1C7;
+  border-radius: 6px;
+  width: 180px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #5F5E5A;
+}
+
+
+/* ----------------------------------------------------------------
+   CHALLENGE 2 — About Me Section
+
+   Add a section with a profile image placeholder on the LEFT
+   and text on the RIGHT.
+
+   --- HTML to add in index.html (paste after the .gallery div) ---
+
+   <div class="about">
+     <div class="about-image">Photo</div>
+     <div class="about-content">
+       <div class="about-name">Your Name</div>
+       <div class="about-bio">Write a short bio about yourself and your photography here. What do you love to shoot? Where are you based?</div>
+       <div class="about-tags">
+         <div class="about-tag">Portrait</div>
+         <div class="about-tag">Street</div>
+         <div class="about-tag">Golden Hour</div>
+       </div>
+     </div>
+   </div>
+
+   --- CSS to complete below ---
+
+   Goal: image placeholder on the LEFT, text content on the RIGHT.
+   The tags at the bottom should sit side by side.
+
+   Properties you will need:
+   display | flex-direction | gap | align-items | flex-wrap
+---------------------------------------------------------------- */
+
+.about {
+  background-color: #f1efe8;
+  padding: 24px;
+  display: ???;
+  gap: ???;
+  align-items: ???;
+}
+
+.about-image {
+  background-color: #D3D1C7;
+  border-radius: 6px;
+  width: 160px;
+  height: 160px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #5F5E5A;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: ???;
+  gap: 10px;
+}
+
+.about-name {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #1a1a2e;
+}
+
+.about-bio {
+  font-size: 0.875rem;
+  color: #5F5E5A;
+  line-height: 1.6;
+  max-width: 480px;
+}
+
+.about-tags {
+  display: ???;
+  flex-wrap: ???;
+  gap: 8px;
+}
+
+.about-tag {
+  background-color: #EEEDFE;
+  color: #534AB7;
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+}
+
+
+/* ----------------------------------------------------------------
+   CHALLENGE 3 — Your Own Section
+
+   Design and build your own section from scratch.
+   You decide the layout, the content, and the flex properties.
+
+   Ideas to try:
+   - A contact section with a name and an email side by side
+   - A featured quote centred on the page
+   - A stats row showing how many photos, locations, years
+
+   Steps:
+   1. Decide what your section will show
+   2. Add the HTML divs to index.html with class names you choose
+   3. Write the CSS rules here using the class names you created
+   4. Use at least two flex properties
+
+   Your HTML goes in index.html.
+   Your CSS goes below this comment.
+---------------------------------------------------------------- */
+
+/* write your CSS here */
