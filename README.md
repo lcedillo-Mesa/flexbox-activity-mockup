@@ -1,225 +1,218 @@
-# CSS Flexbox — Part 2: Style the Mock-Up
-### Guided Version
+# Lens & Light — Photography Blog
+### CSS Flexbox Activity
 
-You have already discovered what flexbox does by uncommenting the CSS.
+You have been given an `index.html` and a `style.css` file. The HTML is complete — do not change it. Your job is to fill in the missing CSS values so your page matches the mock-up.
 
-Now it is your turn to **write it yourself.**
+---
 
-You have been given:
-- The same `index.html` file from Part 1 — do not change it
-- A new `style.css` with some properties **missing**
-- A mock-up showing what your page should look like when you are done
+## Resources
 
-> **Your goal:** Fill in the missing CSS values so your page matches the mock-up.
+- **Flexbox cheat sheet** — your printed reference sheet
+- **CSS-Tricks flexbox guide** — https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+- **Mock-up** — the reference image showing what your finished page should look like
 
 ---
 
 ## Before You Start
 
-Open these three things side by side:
+Open these three things side by side in Codespaces:
 
-1. `style.css` in Codespaces
+1. `style.css` on the left
 2. The live preview (right-click `index.html` → Open with Live Server)
 3. The mock-up reference sheet
 
----
-
-## Word Bank
-
-You will use these values to fill in the blanks. Each one is used **once**.
-
-```
-flex        flex-start        row        flex-end
-```
-
-You can also look at your **cheat sheet** if you need help.
+Look at the mock-up carefully before you write anything. Ask yourself:
+- Where is the text in the header sitting?
+- Which way are the nav links going?
+- Are the sidebar and images side by side or stacked?
+- Where is the footer content sitting?
 
 ---
 
-## Step 1 — Open your style.css
+## Your Task
 
-Find the `.navbar` section. It looks like this:
+Your `style.css` has two types of things to complete:
 
-```css
-.navbar {
-  background-color: #1a3a4a;
-  display: flex;
-  flex-direction: column;
-  align-items: /* BLANK 1 */;
-  gap: 4px;
-  padding: 20px 24px;
-}
-```
+- **`???`** — a value is missing, replace it with the correct one
+- **Missing properties** — some rules have no flex properties at all, you need to add them yourself
+
+Save with **Ctrl + S** after every change and check your preview.
 
 ---
 
-## Blank 1 — `.header` → `align-items`
+## Section by Section
 
-**Look at the mock-up.**
-
-The heading and tagline are on the **LEFT side** of the header.
-
-**Ask yourself:** Which word from the word bank means "start" or "left"?
-
-> **Hint:** The value starts with the word **flex**.
-
-Fill in Blank 1: `align-items: ______________ ;`
-
-**Save with Ctrl + S. Check your preview.**
-
-✅ Does the header text sit on the left? If yes, move to Step 2.
+Work through each section in order. Check the mock-up after each one before moving on.
 
 ---
 
-## Step 2 — Find the `.nav` section
+### Header
 
-It looks like this:
+**Goal:** Title and tagline stack top to bottom. Text sits on the **left** side.
 
-```css
-.nav {
-  background-color: #0F6E56;
-  display: flex;
-  flex-direction: /* BLANK 2 */;
-  justify-content: /* BLANK 3 */;
-  gap: 20px;
-  padding: 10px 24px;
-}
-```
+Find `.header` in your CSS. Two values have `???` — replace them both.
+
+- `flex-direction` controls whether items go left to right or top to bottom
+- `justify-content` controls where items sit along that direction
+
+✅ Check: Does the header text sit on the left side?
 
 ---
 
-## Blank 2 — `.nav` → `flex-direction`
+### Nav
 
-**Look at the mock-up.**
+**Goal:** Links sit **side by side** with space evenly distributed around each one.
 
-The nav links are sitting **side by side** in a line going left to right.
+Find `.nav` in your CSS. Two values have `???` — replace them both.
 
-**Ask yourself:** Which value makes items go left to right — row or column?
+- One controls the direction items flow
+- One controls the spacing between and around items
 
-> **Hint:** Think about rows in a table — they go across, not up and down.
-
-Fill in Blank 2: `flex-direction: ______________ ;`
-
-**Save with Ctrl + S. Check your preview.**
-
-✅ Are the links sitting side by side? If yes, move to Blank 3.
+✅ Check: Are the links in a row with even spacing?
 
 ---
 
-## Blank 3 — `.nav` → `justify-content`
+### Hero
 
-**Look at the mock-up.**
+**Goal:** Title and text sit **side by side**.
 
-The links start from the **left edge** of the nav bar.
+Find `.hero` in your CSS. One value has `???` — replace it.
 
-**Ask yourself:** Which value puts things at the beginning — flex-start or flex-end?
-
-> **Hint:** Start = beginning = left side.
-
-Fill in Blank 3: `justify-content: ______________ ;`
-
-**Save with Ctrl + S. Check your preview.**
-
-✅ Do the links start from the left? If yes, move to Step 3.
+✅ Check: Are the title and text next to each other?
 
 ---
 
-## Step 3 — Find the `.main` section
+### Main
 
-It looks like this:
+**Goal:** Sidebar and images sit **side by side**.
 
-```css
-.main {
-  background-color: #F1EFE8;
-  display: /* BLANK 4 */;
-  flex: 1;
-  gap: 16px;
-  padding: 20px;
-}
-```
+Find `.main` in your CSS. This rule is missing **two properties entirely** — you need to add them yourself.
+
+Think about:
+1. What turns flexbox on?
+2. What makes the children go left to right?
+
+✅ Check: Is the sidebar sitting next to the images?
 
 ---
 
-## Blank 4 — `.main` → `display`
+### Sidebar
 
-**Look at the mock-up.**
+**Goal:** Photo info stacks **top to bottom**.
 
-The two sections are sitting **next to each other**.
+Find `.sidebar` in your CSS. One value has `???` — replace it.
 
-**Ask yourself:** What is the one property that turns flexbox on?
-
-> **Hint:** You have typed this many times today. It is two words joined by a colon.
-
-Fill in Blank 4: `display: ______________ ;`
-
-**Save with Ctrl + S. Check your preview.**
-
-✅ Are the two sections side by side? If yes, move to Step 4.
+✅ Check: Is the camera info stacking vertically in the sidebar?
 
 ---
 
-## Step 4 — Find the `.footer` section
+### Images
 
-It looks like this:
+**Goal:** The two photos stack **on top of each other** and fill the available space equally.
 
-```css
-.footer {
-  background-color: #1a3a4a;
-  display: flex;
-  justify-content: /* BLANK 5 */;
-  align-items: center;
-  padding: 12px 24px;
-}
-```
+Find `.images` in your CSS. One value has `???` — replace it.
+
+Find `.photo` in your CSS. One value has `???` — replace it with the value that makes both photos share the space equally.
+
+✅ Check: Are both photos stacked in a column and the same height?
 
 ---
 
-## Blank 5 — `.footer` → `justify-content`
+### Footer
 
-**Look at the mock-up.**
+**Goal:** Footer content sits on the **left** side.
 
-The footer text is on the **right side**.
+Find `.footer` in your CSS. One value has `???` — replace it.
 
-**Ask yourself:** Which value pushes things to the end — flex-start or flex-end?
-
-> **Hint:** End = finish = right side.
-
-Fill in Blank 5: `justify-content: ______________ ;`
-
-**Save with Ctrl + S. Check your preview.**
-
-✅ Is the footer text on the right? 
+✅ Check: Is the footer text on the left?
 
 ---
 
-## Check Your Work
+## Bonus — Responsive Font Sizes
 
-Go through this list one by one:
+All font sizes in the file currently use `px` which is a fixed unit. Update them to use `rem` instead so they respond to the user's browser settings.
 
-- [ ] Header background is dark teal `#1a3a4a`
-- [ ] Header text is on the **left**
-- [ ] Nav background is green `#0F6E56`
-- [ ] Nav links start from the **left**
-- [ ] Main background is warm off-white `#F1EFE8`
-- [ ] Two sections sit **side by side**
-- [ ] Footer text is on the **right**
+A rough guide:
 
-If something does not look right, go back to that blank and check your word bank again.
+| px | rem |
+|----|-----|
+| 11px | 0.7rem |
+| 12px | 0.75rem |
+| 13px | 0.85rem |
+| 14px | 0.9rem |
+| 18px | 1.125rem |
+| 22px | 1.375rem |
 
----
-
-## Stuck?
-
-**Step 1:** Look at your word bank at the top of this sheet.
-
-**Step 2:** Look at your cheat sheet — find the property name and read the values next to it.
-
-**Step 3:** Ask your partner.
-
-**Step 4:** Put your hand up.
+Refresh the page after each change to see the effect.
 
 ---
 
-## You Did It!
+## Challenges
 
-Great work. Show your teacher your preview before closing your laptop.
+You have finished the main layout — good work. The challenges below ask you to add new sections to the page. For each one, the HTML is given to you. Add it to `index.html` in the place described, then complete the CSS in `style.css`.
+
+---
+
+### Challenge 1 — Gallery Section
+
+Add a row of photo cards that wraps onto the next line when there is not enough space.
+
+**Where to add the HTML:** Paste after the closing `</div>` of `.main` in `index.html`.
+
+**What to do in the CSS:** Find `.gallery-grid` in `style.css` and fill in the four `???` values.
+
+Properties you will need: `display` · `flex-wrap` · `gap` · `justify-content`
+
+> **Hint:** Which value of `flex-wrap` lets items move to the next line?
+
+✅ Check: Do the six cards sit in rows and wrap when the screen is narrow?
+
+---
+
+### Challenge 2 — About Me Section
+
+Add a section with a profile image on the left and your bio text on the right.
+
+**Where to add the HTML:** Paste after the `.gallery` div in `index.html`.
+
+**What to do in the CSS:** Find `.about`, `.about-content`, and `.about-tags` in `style.css` and fill in the `???` values.
+
+Think about:
+- `.about` — should the image and text go side by side or stack?
+- `.about-content` — should the name, bio, and tags stack or sit in a row?
+- `.about-tags` — should the tags sit side by side?
+
+✅ Check: Is the image on the left with your bio text next to it? Do the tags sit in a row?
+
+---
+
+### Challenge 3 — Your Own Section
+
+Design and build a section from scratch. You decide everything — the content, the layout, and the class names.
+
+**Ideas to try:**
+- A contact row with a name and email address side by side
+- A centred quote from a photographer you admire
+- A stats row showing photos taken, locations visited, years shooting
+
+**Steps:**
+1. Decide what your section will contain
+2. Add your HTML to `index.html` — create your own class names
+3. Write the CSS rules at the bottom of `style.css`
+4. Use at least **two flex properties**
+
+---
+
+## Check Your Whole Page
+
+Before you finish, go through this list:
+
+- [ ] Header text is on the left
+- [ ] Nav links are side by side with even spacing
+- [ ] Hero title and text are side by side
+- [ ] Sidebar and images are side by side
+- [ ] Sidebar info stacks top to bottom
+- [ ] Two photos stack top to bottom and are the same height
+- [ ] Footer content is on the left
+- [ ] Font sizes use rem not px
+- [ ] At least one challenge section is added and styled
