@@ -1,11 +1,9 @@
 /* ================================================================
    Lens & Light — Photography Blog
-   style.css
+   style.css — Guided Version
 
-   Use the mock-up and your cheat sheet to complete the rules below.
-   Properties marked with ??? need to be filled in.
-   Some rules are missing properties entirely — you will need to add them.
-   Save with Ctrl + S after every change.
+   Find every ??? and replace it with the correct value.
+   Use your cheat sheet and the mock-up to help you.
 ================================================================ */
 
 * {
@@ -17,21 +15,28 @@
 
 /* ----------------------------------------------------------------
    BODY
+   Makes the whole page stack top to bottom.
    Nothing to change here.
+
+   For a fun surprise: change flex-direction from column to column-reverse
 ---------------------------------------------------------------- */
 
 .body {
   font-family: Arial, sans-serif;
   background-color: #f1efe8;
   display: flex;
-  flex-direction: column;
+  flex-direction: column;  /* change the value here */
   min-height: 100vh;
 }
 
 
 /* ----------------------------------------------------------------
    HEADER
-   Goal: title and tagline stack top to bottom, text on the LEFT.
+   Goal: title and tagline should stack on top of each other
+   and sit on the LEFT side of the header.
+
+   There are two values that need to be updated below,
+   can you figure out which ones? 
 ---------------------------------------------------------------- */
 
 .header {
@@ -39,9 +44,9 @@
   color: white;
   display: flex;
   padding: 20px 24px;
-  flex-direction: ???;
   gap: 4px;
-  justify-content: ???;
+/*  */
+/*  */
 }
 
 .header-title {
@@ -57,16 +62,22 @@
 
 /* ----------------------------------------------------------------
    NAV
-   Goal: links sit SIDE BY SIDE with space around each one.
+   Goal: links should sit SIDE BY SIDE and have space around each element.
+
+   One of the properties below is using the wrong value —
+   can you figure out which one?
+
+   The other property controls how items are spaced left to right.
 ---------------------------------------------------------------- */
 
 .nav {
   background-color: #0F6E56;
   display: flex;
-  flex-direction: ???;
-  justify-content: ???;
+  flex-direction: column; 
   padding: 10px 24px;
   gap: 20px;
+
+  /* add here */
 }
 
 .nav-link {
@@ -78,7 +89,11 @@
 
 /* ----------------------------------------------------------------
    HERO
-   Goal: title and text sit SIDE BY SIDE.
+   Goal: title and text should sit SIDE BY SIDE.
+
+   Right now the elements are stacking and centred.
+   This will require you to change two values below.
+   Removing some properties might help too.
 ---------------------------------------------------------------- */
 
 .hero {
@@ -87,7 +102,8 @@
   display: flex;
   gap: 10px;
   color: white;
-  flex-direction: ???;
+  flex-direction: column;
+  align-items: center; 
 }
 
 .hero-title {
@@ -105,12 +121,18 @@
 
 /* ----------------------------------------------------------------
    MAIN
-   Goal: sidebar and images sit SIDE BY SIDE.
+   Goal: sidebar and images should sit SIDE BY SIDE.
 
-   This rule is missing two properties — add them yourself.
+   Two properties are missing from this rule:
+
+   1. What property is needed to turn this container into a flex container?
+
+   2. What property changes the direction of elements?
 ---------------------------------------------------------------- */
 
 .main {
+  /* add here */
+  flex-direction: column;
   gap: 16px;
   padding: 20px;
   background-color: #f1efe8;
@@ -119,7 +141,10 @@
 
 /* ----------------------------------------------------------------
    SIDEBAR
-   Goal: photo info stacks TOP TO BOTTOM.
+   Goal: all the photo info should stack TOP TO BOTTOM.
+
+   You need to use the same property from the last challenge
+   but with a different value to make elements stack.
 ---------------------------------------------------------------- */
 
 .sidebar {
@@ -130,7 +155,7 @@
   flex-shrink: 0;
   border: 0.5px solid #D3D1C7;
   display: flex;
-  flex-direction: ???;
+  flex-direction: row;  
   gap: 10px;
 }
 
@@ -171,21 +196,27 @@
 
 /* ----------------------------------------------------------------
    IMAGES
-   Goal: photos stack TOP TO BOTTOM and fill the remaining space.
+   Goal: two photos should stack on TOP OF EACH OTHER.
 
-   This rule is missing one property — add it yourself.
+   What value can you change below to make elements go from
+   left to right into top to bottom?
 ---------------------------------------------------------------- */
 
 .images {
   display: flex;
-  flex-direction: ???;
+  flex: 1;
+  flex-direction: row; 
   gap: 12px;
 }
 
 
 /* ----------------------------------------------------------------
    PHOTO
-   Goal: each photo fills the available space equally.
+   Goal: photos should fill the remaining space equally.
+
+   The flex property is already here — just the value is wrong.
+   Change it from 0 to 1 and see what happens. 
+   This prop is used to control the children size.
 ---------------------------------------------------------------- */
 
 .photo {
@@ -195,20 +226,24 @@
   font-size: 13px;
   color: #5F5E5A;
   text-align: center;
-  flex: ???;
+  flex: 0;  
 }
 
 
 /* ----------------------------------------------------------------
    FOOTER
-   Goal: links sit side by side on the LEFT side of the footer.
+   Goal: links should sit side by side on the LEFT side of the footer.
+
+   Look at the mock-up — the content should be on the LEFT
+   but right now it is centred.
+   What the update?
 ---------------------------------------------------------------- */
 
 .footer {
   background-color: #1a1a2e;
   padding: 12px 24px;
   display: flex;
-  justify-content: ???;
+  justify-content: center;   
   gap: 20px;
 }
 
@@ -224,13 +259,17 @@
 
 
 /* ----------------------------------------------------------------
-   BONUS — responsive font sizes
+   BONUS GOAL — responsive font sizes
 
-   Update all font sizes from px to rem.
-   Example: 16px ≈ 1rem
+   Right now all font sizes use px (pixels) which is a fixed unit.
+   Update them to use rem instead — this makes fonts respond
+   to the user's browser settings.
+
+   Example: 16px is roughly equal to 1rem
+   Try: 13px → 0.85rem | 14px → 0.9rem | 18px → 1.125rem
+
+   Refresh the page to see changes.
 ---------------------------------------------------------------- */
-
-
 /* ================================================================
    CHALLENGES
    You have finished the main layout — great work.
@@ -414,3 +453,5 @@
 ---------------------------------------------------------------- */
 
 /* write your CSS here */
+
+
