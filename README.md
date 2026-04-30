@@ -1,6 +1,9 @@
 # Lens & Light — Photography Blog
 ### CSS Flexbox Activity
 
+
+
+
 You have been given an `index.html` and a `style.css` file. The HTML is complete — do not change it. Your job is to fill in the missing CSS values so your page matches the mock-up.
 
 ---
